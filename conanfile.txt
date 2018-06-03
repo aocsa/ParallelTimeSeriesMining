@@ -1,0 +1,5 @@
+[requires]
+TBB/4.4.4@conan/stable
+
+[generators]
+cmake

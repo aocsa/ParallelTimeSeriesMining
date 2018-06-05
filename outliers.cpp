@@ -157,7 +157,8 @@ int main(int nargs, char *args[])
     double time = (end - begin) / 1000.0;
     //save in file
     char buffer_tmp[100];
-    string nameFile = getNameFile(db) + "." + string(args[5]);
+    string nameFile = db + "." + string(args[5]) + ".OUTLIERS";
+    std::cout << "nameFile: " << nameFile << std::endl;
     ofstream save_file(nameFile.c_str());
     if (dataset.size() > 0) {
         sprintf(buffer_tmp,"Mean top-k outliers time exec: %0.6lf\n", (double)time);
